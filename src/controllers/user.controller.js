@@ -188,11 +188,6 @@ const loginUser = asyncHandler(async (req, res) => {
 })
 
 const logedOutUser = asyncHandler(async (req, res) => {
-    // Logout logic goes here
-    // get user id from req.user
-    // remove refresh token from db
-    // clear cookies
-    // send response
 
 
     await User.findByIdAndUpdate(req.user._id, {
