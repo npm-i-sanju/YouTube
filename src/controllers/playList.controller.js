@@ -170,25 +170,113 @@ const deletePlaylist = asyncHandler(async (req, res) => {
     }
 
     return res
-        .status(200)
-        .json(
-            new ApiResponse(200, {}, "Playlist deleted successfully")
-        )
+    .status(200)
+    .json(
+        new ApiResponse(200, {}, "Playlist deleted successfully")
+    )
 })
 
 const updatePlaylist = asyncHandler(async (req, res) => {
     const { playlistId } = req.params
     const { name, description } = req.body
     //TODO: update playlist
-
-
-
-
-
-
-
-
+    // get playlistId from the URL parameters
+    // get name and description from the request body sent by user
+    if (!isValidObjectId(playlistId)) {
+        throw new ApiError(400, "Invalid playlistId")
+    }
+    // check if playlistId is a valid MongoDB id
     
+    if (!isValidObjectId(name) || !(description)) {
+        throw new ApiError(400, "Plase Enter Name & Description")
+    }
+    // show error if playlistId is invalid
+    // create empty object to store only valid update fields
+    // check if name field is provided in request
+    // remove extra spaces from name and check if it is not empty
+    // add cleaned name into update object
+    // check if description field is provided in request
+    // remove extra spaces from description and check if it is not empty
+    // add cleaned description into update object
+    // check if update object is empty (nothing to update)
+    // show error if user did not provide any valid field
+    // find playlist in database using playlistId and logged-in user id
+    // this makes sure user can update only their own playlist
+    // show error if playlist is not found
+    // check if new name is same as current name
+    // show error if name is same because nothing changed
+    
+     const updateObject = {}
+   
+if (!name == undefined) {
+    if (name.trim() !== "") {
+        updateObject.name = name.trim()
+    }
+}
+
+if (!description == undefined) {
+    if (description.trim() !== "") {
+        updateObject.description = description.trim()
+    }
+}
+
+if (!Object.keys(ObjectId).length) {
+    throw new ApiError(400, "No fields provided for update");
+}
+
+const currentPlaylist = await Playlist.findOne({
+    _id: playlistId,
+    owner: req.user._id
+})
+
+if (!currentPlaylist) {
+    throw new ApiError(400,"Playlist not found")
+}
+
+if (updateObject?.name && currentPlaylist.name == updateObject.name) {
+    throw new ApiError(400,"Please update the playlist name")
+}
+// check for duplicate playlist name for same user
+    // find another playlist with same name but different id
+    // use case-insensitive search to prevent same name with different cases
+    // show error if duplicate playlist exists
+    // update playlist name if new name is provided
+    // update playlist description if new description is provided
+    // save updated playlist in database
+    // send success response with updated playlist data
+    // return status code 200 which means success
+    // send updated playlist and success message to user
+    // create empty object to store new values
+
+if (updateObject?.name) {
+    const duplicateName = await Playlist.findOne({
+        owner: req.user._id,
+        _id:{$ne: playlistId},
+        name: { $regex: new RegExp(`^${updateObject.name}$`, "i") }
+    })
+
+    if (!duplicateName) {
+        throw new ApiError(400,"You already have a playlist with this name")
+    }
+
+    if (updateObject?.name) currentPlaylist.name = updateObject.name;
+  if (updateObject?.description)
+    currentPlaylist.description = updateObject.description;
+
+  await currentPlaylist.save();
+
+return res
+.status(200)
+.json(new ApiResponse (200,currentPlaylist,"Playlist updated successfully"))
+
+
+}
+
+
+
+
+
+
 })
 
 export {
