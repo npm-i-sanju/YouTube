@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom"
-import { useGetUserChannelProfileQuery, useUpdateUserAvatarMutation, useUpdateUserCoverImageMutation } from "../../services/user/userApi.js";
+import { useGetUserChannelProfileQuery, useUpdateUserAvatarMutation, useUpdateUserCoverImageMutation } from "../../service/user/userApi.js";
 //import { Aside, Password, Personal } from "../../components";
-import {Aside} from '../../components/Aside.jsx';
-import { Personal } from '../../components/Personal.jsx';
-import { Password } from '../../components/Password.jsx';
+import Aside from '../../components/aside/Aside.jsx';
+import  Personal  from '../../components/CustomizeProfile/Personal.jsx';
+import Password  from '../../components/CustomizeProfile/Passwoed.jsx';
 import toast from "react-hot-toast";
 
 

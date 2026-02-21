@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 //import { Aside, PlaylistCard, SubscribedCard, TweetCard, VideoCard } from '../../components'
-import { Aside} from '../../components/Aside.jsx';
-import { PlaylistCard } from '../../components/PlaylistCard.jsx';
-import { SubscribedCard } from '../../components/SubscribedCard.jsx';
-import { TweetCard } from '../../components/Tweet.jsx';
-import { VideoCard } from '../../components/VideoCard.jsx';
-import { useGetUserChannelProfileQuery } from '../../services/user/userApi.js';
+import  Aside from '../../components/aside/Aside.jsx';
+import  PlaylistCard  from '../../components/playlist/PlaylistCard.jsx';
+import  SubscribedCard  from '../../components/Subscribe.jsx';
+import  TweetCard  from '../../components/Tweet.jsx';
+import  VideoCard  from '../../components/VideoCard.jsx';
+import { useGetUserChannelProfileQuery } from '../../service/user/userApi.js';
 import { Link, useLocation, useParams } from 'react-router-dom';
 
 function MyChannel() {

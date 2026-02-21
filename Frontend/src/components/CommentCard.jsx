@@ -1,6 +1,6 @@
 import { memo, useState } from 'react'
 import { useAddCommentMutation, useDeleteCommentMutation, useGetVideoCommentsQuery } from '../service/comment/commentApi.js';
-import { formatTimeAgo } from '../utils/FormatTime.js';
+import  formatTimeAgo  from '../utils/FormatTime.js';
 import Button from './Button.jsx';
 import toast from 'react-hot-toast';
 import { useGetCurrentUserQuery } from '../service/user/userApi.js';

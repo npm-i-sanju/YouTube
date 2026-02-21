@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 //import { Aside, VideoCard } from '../../components'
-import {Aside} from '../../components/Aside.jsx';
-import { VideoCard } from '../../components/VideoCard.jsx';
-import { useGetLikedVideosQuery } from '../../services/like/likeApi.js';
-import { formatDuration } from '../../utils/FormatDuration.js';
-import { formatViews } from '../../utils/FormatViews.js';
-import { formatTimeAgo } from '../../utils/FormatTime.js';
+import Aside  from '../../components/aside/Aside.jsx';
+//import { VideoCard } from '../../components/VideoCard.jsx';
+import { useGetLikedVideosQuery } from '../../service/like/likeApi.js';
+import  formatDuration  from '../../utils/FormatDuration.js';
+import  formatViews  from '../../utils/FormatViews.js';
+import formatTimeAgo  from '../../utils/FormatTime.js';
 
 function LikedVideos() {
   const { data, error, isLoading } = useGetLikedVideosQuery();

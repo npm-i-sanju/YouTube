@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useDeletePlaylistMutation, useGetUserPlaylistsQuery, useUpdatePlaylistMutation } from "../../service/playlist/playlistApi.js";
-import { formatTimeAgo } from "../../utils/FormatTime.js"
+import formatTimeAgo  from "../../utils/FormatTime.js"
 import { useState } from "react";
 import toast from 'react-hot-toast';
-import { confirmDelete } from "../../utils/confirmDelete.jsx";
+import  confirmDelete  from "../../utils/confirmDelete.jsx";
 
 function PlaylistCard({ data, editAndDelete = false }) {
 

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Aside } from '../../components'
-import { formatDuration } from '../../utils/FormatDuration.js';
-import { formatViews } from '../../utils/FormatViews.js';
-import { formatTimeAgo } from '../../utils/FormatTime.js';
-import { useGetWatchHistoryQuery } from '../../services/user/userApi.js';
+import Aside  from '../../components/aside/Aside.jsx'
+import formatTimeAgo  from '../../utils/FormatTime.js';
+import formatDuration  from '../../utils/FormatDuration.js';
+import formatViews  from '../../utils/FormatViews.js';
+import { useGetWatchHistoryQuery } from '../../service/user/userApi.js';
 import { useEffect, useMemo } from 'react';
 import { memo } from 'react';
 

@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useGetCurrentUserQuery, useLogoutUserMutation } from "../../services/user/userApi.js";
+import { useGetCurrentUserQuery, useLogoutUserMutation } from "../../service/user/userApi.js";
 import Logo from "../Logo.jsx";
 import { useEffect } from "react";
-import ReloadBtn from "../ReloadBtn.jsx";
+import ReloadBtn from "../RelodButton.jsx";
 import toast, { Toaster } from "react-hot-toast";
 
 function Header({ onReload }) {

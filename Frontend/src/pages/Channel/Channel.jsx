@@ -1,12 +1,12 @@
 import { useState } from 'react'
 //import { Aside, PlaylistCard, SubscribedCard, VideoCard } from '../../components'
-import {Aside} from '../../components/Aside.jsx';
-import { PlaylistCard } from '../../components/PlaylistCard.jsx';
-import { SubscribedCard } from '../../components/SubscribedCard.jsx';
-import { VideoCard } from '../../components/VideoCard.jsx';
-import { useGetUserChannelProfileQuery } from '../../services/user/userApi.js';
+import Aside from '../../components/aside/Aside.jsx';
+import  PlaylistCard  from '../../components/playlist/PlaylistCard.jsx';
+import  SubscribedCard  from '../../components/Subscribe.jsx';
+import  VideoCard  from '../../components/VideoCard.jsx';
+import  {useGetUserChannelProfileQuery}  from '../../service/user/userApi.js';
 import { useParams } from 'react-router-dom';
-import { useToggleSubscriptionMutation } from '../../services/subscription/subscriptionApi.js';
+import  {useToggleSubscriptionMutation } from '../../service/subscription/subscriptionsApi.js';
 import TweetCard from '../../components/Tweet.jsx';
 import toast from 'react-hot-toast';
 

@@ -1,9 +1,9 @@
-import Aside from "../../components/Aside/Aside.jsx"
-import { useGetPlaylistByIdQuery, useRemoveVideoFromPlaylistMutation } from '../../services/playlist/playlistApi.js';
+import Aside from "../../components/aside/Aside.jsx"
+import { useGetPlaylistByIdQuery, useRemoveVideoFromPlaylistMutation } from '../../service/playlist/playlistApi.js';
 import { Link, useParams } from 'react-router-dom';
-import { formatTimeAgo } from '../../utils/formatTimeAgo.js';
-import { formatDuration } from '../../utils/FormatDuration.js';
-import { formatViews } from '../../utils/FormatViews.js';
+import  formatTimeAgo  from '../../utils/FormatTime.js';
+import  formatDuration  from '../../utils/FormatDuration.js';
+import  formatViews  from '../../utils/FormatViews.js';
 import { Trash } from "lucide-react";
 import toast from "react-hot-toast";
 

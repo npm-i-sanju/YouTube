@@ -1,14 +1,14 @@
 import { Link, useParams } from 'react-router-dom'
-import { useGetVideoByIdQuery } from '../../services/video/videoApi.js'
+import { useGetVideoByIdQuery } from '../../service/video/videoApi.js'
 //import { Aside, CommentsCard, SavePlaylist, VideoCard } from '../../components';
-import {Aside} from '../../components/Aside.jsx';
-import { CommentsCard } from '../../components/CommentsCard.jsx';
-import { SavePlaylist } from '../../components/SavePlaylist.jsx';
-import { VideoCard } from '../../components/VideoCard.jsx';
-import { formatViews } from '../../utils/FormatViews.js';
-import { formatTimeAgo } from '../../utils/FormatTime.js';
-import { useToggleVideoLikeMutation } from '../../services/like/likeApi.js';
-import { useToggleSubscriptionMutation } from '../../services/subscription/subscriptionApi.js';
+import Aside from '../../components/aside/Aside.jsx';
+import  CommentsCard  from '../../components/CommentCard.jsx';
+import SavePlaylist  from '../../components/playlist/Savelist.jsx';
+import  VideoCard  from '../../components/VideoCard.jsx';
+import  formatViews  from '../../utils/FormatViews.js';
+import  formatTimeAgo  from '../../utils/FormatTime.js';
+import { useToggleVideoLikeMutation } from '../../service/like/likeApi.js';
+import {useToggleSubscriptionMutation } from '../../service/subscription/subscriptionsApi.js';
 import toast from 'react-hot-toast';
 
 function Player() {

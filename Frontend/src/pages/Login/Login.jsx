@@ -1,10 +1,10 @@
 import { useState } from "react";
 //import { Button, Input, Logo } from "../../components";
-import {Button } from '../../components/Button.jsx';
-import { Input } from '../../components/Input.jsx';
-import { Logo } from '../../components/Logo.jsx';
+import Button  from '../../components/Button.jsx';
+import  Input  from '../../components/Input.jsx';
+import  Logo  from '../../components/Logo.jsx';
 import { useNavigate, Link } from "react-router-dom";
-import { useLoginUserMutation } from "../../services/user/userApi.js";
+import { useLoginUserMutation } from "../../service/user/userApi.js";
 import toast from "react-hot-toast";
 
 function Login() {

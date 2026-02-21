@@ -4,8 +4,8 @@ import {
     usePublishAVideoMutation,
     useTogglePublishStatusMutation,
     useUpdateVideoMutation,
-} from '../../services/video/videoApi';
-import { Aside } from '../../components';
+} from '../../service/video/videoApi';
+import  Aside  from '../../components/aside/Aside.jsx';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 

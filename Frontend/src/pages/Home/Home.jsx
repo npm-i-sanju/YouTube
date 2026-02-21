@@ -1,7 +1,7 @@
 //import { Aside, VideoCard } from '../../components'
-import {Aside} from '../../components/Aside.jsx';
-import { VideoCard } from '../../components/VideoCard.jsx';
-import { useGetAllVideosQuery } from '../../services/video/videoApi.js';
+import Aside from '../../components/aside/Aside.jsx';
+import  VideoCard  from '../../components/VideoCard.jsx';
+import { useGetAllVideosQuery } from '../../service/video/videoApi.js';
 
 function Home() {
   const { error, isLoading } = useGetAllVideosQuery();

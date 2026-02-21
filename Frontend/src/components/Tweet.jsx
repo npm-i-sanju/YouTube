@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import { useToggleTweetLikeMutation } from '../services/like/likeApi.js';
-import { useCreateTweetMutation, useDeleteTweetMutation, useGetUserTweetQuery } from '../services/tweet/tweetApi.js';
-import { formatTimeAgo } from '../utils/FormatTime.js';
+import  {useToggleTweetLikeMutation } from '../service/tweet/tweetApi.js'
+import { useCreateTweetMutation, useDeleteTweetMutation, useGetUserTweetQuery } from '../service/tweet/tweetApi.js';
+import  formatTimeAgo  from '../utils/FormatTime.js';
 import toast from 'react-hot-toast';
 
 const TweetCard = memo(({ data, addTweet = false }) => {

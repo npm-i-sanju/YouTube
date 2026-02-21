@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 //import { Input, Button, Logo } from "../../components"
-import {Input} from "../../components/Input/Input.jsx"
-import {Button} from "../../components/Button/Button.jsx"
-import {Logo} from "../../components/Logo/Logo.jsx"
+import Input from "../../components/Input.jsx"
+import Button from "../../components/Button.jsx"
+import Logo from "../../components/Logo.jsx"
 
 import { useNavigate, Link } from 'react-router-dom'
-import { useRegisterUserMutation } from '../../services/user/userApi.js'
+import { useRegisterUserMutation } from '../../service/user/userApi.js'
 import toast from 'react-hot-toast'
 
 function Register() {

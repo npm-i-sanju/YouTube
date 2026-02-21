@@ -1,7 +1,7 @@
 import React from 'react'
 //import { Footer, Header } from '../../components'
-import {Footer} from '../../components/Footer.jsx';
-import {Header} from '../../components/Header.jsx';
+import Footer from '../../components/footer/Footer.jsx';
+import Header from '../../components/header/Header.jsx';
 
 function Landing() {
   return (
