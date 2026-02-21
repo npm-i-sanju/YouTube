@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {useGetCurrentUserQuery} from "../../service/user/userApi";
+import {useGetCurrentUserQuery} from "../../service/user/userApi.js";
 
 function Aside() {
     const username = useGetCurrentUserQuery()?.data?.data?.username;

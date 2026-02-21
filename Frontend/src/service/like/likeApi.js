@@ -1,5 +1,5 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
-import { baseApi } from "../baseApi";
+import { baseApi } from "../baseApi.js";
 
 export const likeApi = createApi({
     reducerPath: 'likeApi',

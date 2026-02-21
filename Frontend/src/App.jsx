@@ -1,14 +1,38 @@
-import { useState } from 'react'
+import { Outlet } from 'react-router-dom';
+import { Footer, Header } from './components/index.js';
+import { useState } from 'react';
 
+const App = () => {
+  const [reloadKey, setReloadKey] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
-function App() {
-  
+  const handleReload = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setReloadKey(prev => prev + 1);
+      setIsLoading(false);
+    }, 1500);
+  };
 
   return (
-    <>
-      <h1>Welcome to the App!</h1>
-    </>
-  )
-}
+    <div className="min-h-screen flex flex-col">
+      <Header onReload={handleReload} isLoading={isLoading} />
+      <main className="flex-1">
+        <div key={reloadKey}>
+          <Outlet />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
 
-export default App
+  // return !loading ? (
+  //     <div className=''>
+  //       {/* <Header /> */}
+  //       <Outlet />
+  //       {/* <Footer /> */}
+  //     </div>
+  // ) : null
+};
+
+export default App;

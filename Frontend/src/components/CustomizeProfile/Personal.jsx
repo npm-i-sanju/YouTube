@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useUpdateAccountDetailsMutation } from "../../services/user/userApi"
+import { useUpdateAccountDetailsMutation } from "../../service/user/userApi.js"
 import toast from "react-hot-toast";
 
 function Personal({refetchUser}) {

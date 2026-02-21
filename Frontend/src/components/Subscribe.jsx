@@ -1,4 +1,4 @@
-import { useGetSubscribedChannelsQuery, useToggleSubscriptionMutation } from '../services/subscription/subscriptionApi';
+import { useGetSubscribedChannelsQuery, useToggleSubscriptionMutation } from '../service/subscription/subscriptionsApi.js';
 
 function SubscribedCard({ data }) {
 

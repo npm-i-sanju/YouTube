@@ -1,9 +1,9 @@
 import { memo, useState } from 'react';
 import { Link } from 'react-router-dom'
-import { formatViews } from '../utils/formatViews';
-import { formatDuration } from '../utils/formatDuration';
-import { formatTimeAgo } from '../utils/formatTimeAgo';
-import { useGetAllUserVideosQuery, useGetAllVideosQuery, usePublishAVideoMutation } from '../services/video/videoApi';
+import { formatViews } from '../utils/FormatViews.js';
+import { formatDuration } from '../utils/FormatDuration.js';
+import { formatTimeAgo } from '../utils/FormatTime.js';
+import { useGetAllUserVideosQuery, useGetAllVideosQuery, usePublishAVideoMutation } from '../services/video/videoApi.js';
 import toast from 'react-hot-toast';
 
 const VideoCard = memo(({ data, userSpecificVideos=true, addVideoBtn=false }) => {

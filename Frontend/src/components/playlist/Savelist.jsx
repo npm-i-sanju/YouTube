@@ -1,7 +1,7 @@
 import { memo, useEffect, useState } from 'react'
-import { useAddVideoToPlaylistMutation, useCreatePlaylistMutation, useGetUserPlaylistsQuery } from '../../services/playlist/playlistApi';
-import { useGetCurrentUserQuery } from '../../services/user/userApi';
-import Button from '../Button';
+import { useAddVideoToPlaylistMutation, useCreatePlaylistMutation, useGetUserPlaylistsQuery } from '../../service/playlist/playlistApi.js';
+import { useGetCurrentUserQuery } from '../../service/user/userApi.js';
+import Button from '../Button.jsx';
 
 const SavePlaylist = memo(({videoId}) => {
     const [addPlaylist, setAddPlaylist] = useState("");

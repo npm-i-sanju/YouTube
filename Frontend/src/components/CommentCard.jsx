@@ -1,9 +1,9 @@
 import { memo, useState } from 'react'
-import { useAddCommentMutation, useDeleteCommentMutation, useGetVideoCommentsQuery } from '../services/comment/commentApi';
-import { formatTimeAgo } from '../utils/formatTimeAgo';
-import Button from './Button';
+import { useAddCommentMutation, useDeleteCommentMutation, useGetVideoCommentsQuery } from '../service/comment/commentApi.js';
+import { formatTimeAgo } from '../utils/FormatTime.js';
+import Button from './Button.jsx';
 import toast from 'react-hot-toast';
-import { useGetCurrentUserQuery } from '../services/user/userApi';
+import { useGetCurrentUserQuery } from '../service/user/userApi.js';
 
 const CommentsCard = memo(({ videoId }) => {
 
