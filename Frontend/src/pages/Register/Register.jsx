@@ -13,7 +13,7 @@ function Register() {
     const [registerUser, { isLoading, error }] = useRegisterUserMutation();
 
     const [formData, setFormData] = useState({
-        fullName: "",
+        fullname: "",
         email: "",
         username: "",
         password: "",
@@ -39,7 +39,7 @@ function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!formData.fullName || !formData.email || !formData.username || !formData.password) {
+        if (!formData.fullname || !formData.email || !formData.username || !formData.password) {
             toast.error("Please fill in all required fields.");
             return;
         }
@@ -60,7 +60,7 @@ function Register() {
             await registerUser(data).unwrap();
 
             setFormData({
-                fullName: "",
+                fullname: "",
                 email: "",
                 username: "",
                 password: "",
@@ -90,9 +90,9 @@ function Register() {
                     <Input
                         label={'Fullname*'}
                         type={'text'}
-                        name={'fullName'}
+                        name={'fullname'}
                         onChange={handleChange}
-                        value={formData.fullName}
+                        value={formData.fullname}
                         placeholder={'Enter your Fullname'}
                         required
                     />
